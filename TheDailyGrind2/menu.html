@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Send The Daily Grind a question, suggestion, or event enquiry.">
+    <title>Make an Enquiry | The Daily Grind</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            color-scheme: light;
+            --coffee: #493323;
+            --coffee-dark: #302116;
+            --cream: #faf7f1;
+            --muted: #71685e;
+            --accent: #b86f3d;
+            --line: #e9e1d6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            background: var(--cream);
+            color: var(--coffee-dark);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            background: var(--coffee-dark);
+            color: #fff;
+        }
+
+        .header-inner {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 76px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #f2c49f;
+        }
+
+        main {
+            width: min(620px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 56px 0 64px;
+        }
+
+        .intro {
+            margin-bottom: 26px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            color: var(--coffee);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(2.2rem, 6vw, 3.2rem);
+            line-height: 1.15;
+        }
+
+        .intro p:last-child {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .form-card {
+            padding: 32px;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgb(48 33 22 / 7%);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--coffee);
+            font-size: 0.94rem;
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 13px;
+            border: 1px solid #cfc6ba;
+            border-radius: 6px;
+            background: #fff;
+            color: var(--coffee-dark);
+            font: inherit;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #8b837a;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--accent);
+            outline: 3px solid rgb(184 111 61 / 18%);
+        }
+
+        textarea {
+            min-height: 140px;
+            resize: vertical;
+        }
+
+        .form-error {
+            display: block;
+            min-height: 1.2em;
+            margin-top: 3px;
+            color: #a83226;
+            font-size: 0.82rem;
+        }
+
+        .invalid {
+            border-color: #a83226;
+        }
+
+        .consent-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .consent-row input {
+            width: auto;
+            margin: 4px 0 0;
+        }
+
+        .consent-row label {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .form-status {
+            min-height: 1.5em;
+            margin: 16px 0 0;
+            text-align: center;
+        }
+
+        .form-status.error {
+            color: #a83226;
+        }
+
+        .form-status.notice {
+            color: var(--coffee);
+        }
+
+        button {
+            width: 100%;
+            padding: 13px 20px;
+            border: 0;
+            border-radius: 6px;
+            background: var(--coffee);
+            color: #fff;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:hover,
+        button:focus-visible {
+            background: var(--coffee-dark);
+        }
+
+        footer {
+            padding: 20px;
+            background: var(--coffee-dark);
+            color: #eadfd4;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                min-height: 68px;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 14px 0;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 18px;
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            .form-card {
+                padding: 24px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">The Daily Grind</a>
+            <nav aria-label="Main navigation">
+                <a href="menu.html" aria-current="page">Menu</a>
+                <a href="about.html">About</a>
+                <a href="enquiry.html">Enquiries</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <p class="eyebrow">We're happy to help</p>
+            <h1 id="page-title">Make an enquiry</h1>
+            <p>Send us a message about our menu, an event, or anything else.</p>
+        </section>
+
+        <div id="enquiry-form-root"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Daily Grind</p>
+    </footer>
+    <script src="scripts.js" defer></script>
+</body>
+</html>

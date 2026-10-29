@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about The Daily Grind, your neighbourhood café for good coffee and freshly made food.">
+    <title>About Us | The Daily Grind</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            color-scheme: light;
+            --coffee: #493323;
+            --coffee-dark: #302116;
+            --cream: #faf7f1;
+            --muted: #71685e;
+            --accent: #b86f3d;
+            --line: #e9e1d6;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--cream);
+            color: var(--coffee-dark);
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        .site-header {
+            background: var(--coffee-dark);
+            color: #fff;
+        }
+
+        .header-inner {
+            width: min(1100px, calc(100% - 40px));
+            min-height: 76px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: #f2c49f;
+        }
+
+        .hero {
+            padding: 76px 20px 68px;
+            background: #eee4d7;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 8px;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2 {
+            color: var(--coffee);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .hero p:last-child {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--muted);
+        }
+
+        main {
+            width: min(900px, calc(100% - 40px));
+            margin: 0 auto;
+            padding: 56px 0 64px;
+        }
+
+        .story {
+            max-width: 720px;
+            margin: 0 auto 48px;
+        }
+
+        .story h2,
+        .values h2 {
+            margin-bottom: 14px;
+            font-size: 1.8rem;
+        }
+
+        .story p {
+            color: var(--muted);
+        }
+
+        .values {
+            padding-top: 30px;
+            border-top: 1px solid var(--line);
+        }
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+            margin-top: 22px;
+        }
+
+        .value-card {
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+        }
+
+        .value-card h3 {
+            margin: 0 0 8px;
+            color: var(--coffee);
+            font-size: 1.05rem;
+        }
+
+        .value-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.93rem;
+        }
+
+        .enquiry {
+            margin-top: 48px;
+            padding: 34px 24px;
+            border-radius: 12px;
+            background: var(--coffee);
+            color: #fff;
+            text-align: center;
+        }
+
+        .enquiry h2 {
+            margin: 0 0 8px;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+
+        .enquiry p {
+            margin: 0 0 20px;
+            color: #eadfd4;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 6px;
+            background: #f2c49f;
+            color: var(--coffee-dark);
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .button:hover,
+        .button:focus-visible {
+            background: #ffdab8;
+        }
+
+        footer {
+            padding: 20px;
+            background: var(--coffee-dark);
+            color: #eadfd4;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                min-height: 68px;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding: 14px 0;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .hero {
+                padding: 56px 20px;
+            }
+
+            main {
+                padding-top: 40px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="menu.html">The Daily Grind</a>
+            <nav aria-label="Main navigation">
+                <a href="menu.html">Menu</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="enquiry.html">Enquiries</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" aria-labelledby="page-title">
+        <p class="eyebrow">A little about us</p>
+        <h1 id="page-title">Your neighbourhood coffee stop</h1>
+        <p>The Daily Grind is a welcoming place to slow down, enjoy a good cup, and share freshly made food.</p>
+    </section>
+
+    <main>
+        <section class="story" aria-labelledby="story-heading">
+            <h2 id="story-heading">Made for everyday moments</h2>
+            <p>We believe the best café experiences are built from the simple things: carefully prepared coffee, comforting food, and a friendly welcome. Whether you're stopping by for your morning coffee, meeting a friend, or taking a well-earned break, we're glad you're here.</p>
+            <p>Our menu brings together café classics and fresh favourites, prepared with care and served in a relaxed setting. We keep things thoughtful, welcoming, and easy to enjoy.</p>
+        </section>
+
+        <section class="values" aria-labelledby="values-heading">
+            <h2 id="values-heading">What matters to us</h2>
+            <div class="value-grid">
+                <article class="value-card">
+                    <h3>Good coffee</h3>
+                    <p>We take care with every cup, from the first pour to the last sip.</p>
+                </article>
+                <article class="value-card">
+                    <h3>Fresh food</h3>
+                    <p>Our café favourites are made to be satisfying, simple, and delicious.</p>
+                </article>
+                <article class="value-card">
+                    <h3>A warm welcome</h3>
+                    <p>Come as you are. There's always room for one more at the table.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="enquiry" aria-labelledby="enquiry-heading">
+            <h2 id="enquiry-heading">We'd love to hear from you</h2>
+            <p>Have a question, a suggestion, or an event enquiry? Get in touch.</p>
+            <a class="button" href="enquiry.html">Make an enquiry</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Daily Grind</p>
+    </footer>
+</body>
+</html>
